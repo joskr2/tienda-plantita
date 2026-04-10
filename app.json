@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "chini",
-    "slug": "chini",
+    "name": "tienda-plantita",
+    "slug": "tienda-plantita",
     "version": "1.0.0",
-    "scheme": "chini",
+    "scheme": "tienda-plantita",
     "platforms": ["ios", "android"],
     "web": {
       "bundler": "metro",
@@ -26,14 +26,15 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.chini"
+      "bundleIdentifier": "com.anonymous.tienda-plantita",
+      "simulatorDevice": "iPhone 17"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.chini"
+      "package": "com.anonymous.tienda-plantita"
     }
   }
 }
