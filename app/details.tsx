@@ -11,7 +11,7 @@ export default function Details() {
   const displayName = Array.isArray(name) ? name.join(', ') : (name ?? 'Unknown');
 
   return (
-    <View className="flex flex-1 bg-white">
+    <View className="flex-1 flex bg-white">
       <Stack.Screen options={{ title: 'Details' }} />
       <Container>
         <ScreenContent

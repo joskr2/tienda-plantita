@@ -1,3 +1,4 @@
+import { Host as SwiftUIHost, Text as SwiftUIText } from '@expo/ui/swift-ui';
 import { Link, Stack } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Platform, Text as RNText, View } from 'react-native';
@@ -46,6 +47,3 @@ export default function TestScreen() {
     </View>
   );
 }
-
-// SwiftUI components - only available on iOS
-import { Host as SwiftUIHost, Text as SwiftUIText } from '@expo/ui/swift-ui';
