@@ -1,5 +1,5 @@
 /**
- * Layout HOME — Pantalla raíz "/"
+ * Layout HOME — Tab "/"
  *
  * ¿Qué hace?
  *   - Controla la navegación interna de la home
@@ -11,8 +11,8 @@
  *   - Si home tuviera sub-rutas (ej: /home/search), vivirían aquí dentro
  *
  * Ejemplo de uso:
- *   / → (pantallas) → (home)/index.tsx
- *   /home/search → (pantallas) → (home)/search.tsx (si existiera)
+ *   / → (home)/index.tsx
+ *   /home/search → (home)/search.tsx (si existiera)
  */
 import { Stack } from 'expo-router';
 

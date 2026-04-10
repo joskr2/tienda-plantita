@@ -1,32 +1,30 @@
 /**
- * Layout RAÍZ — Providers globales
+ * Layout RAÍZ — NativeTabs
  *
  * ¿Qué hace?
- *   - Envuelve TODA la app con providers de infraestructura
- *   - SafeAreaProvider: padding para notch/statusbar en iOS
- *   - ErrorBoundary: captura errores de toda la app
- *   - Stack global: define el comportamiento base de navegación
+ *   - Define la barra de tabs nativa con 3 secciones
+ *   - Inicio, Categorías, Producto
  *
  * ¿Quién lo usa?
- *   - TODOS los routes sin excepción (es el wrapper más externo)
- *
- * Ejemplo de uso:
- *   /tienda → pasa por _layout raíz → (pantallas) → (home)
- *   /categorias → pasa por _layout raíz → (pantallas)
+ *   - TODAS las rutas de la app
  */
-import '../global.css';
-
-import { Stack } from 'expo-router';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-import ErrorBoundary from '@/presentation/components/ErrorBoundary';
+import { NativeTabs } from 'expo-router/unstable-native-tabs';
 
 export default function Layout() {
   return (
-    <SafeAreaProvider>
-      <ErrorBoundary>
-        <Stack screenOptions={{ headerShown: false }} />
-      </ErrorBoundary>
-    </SafeAreaProvider>
+    <NativeTabs>
+      <NativeTabs.Trigger name="(home)">
+        <NativeTabs.Trigger.Label>Inicio</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="house.fill" md="home" />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="categorias">
+        <NativeTabs.Trigger.Label>Categorías</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="square.grid.2x2" md="category" />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="producto">
+        <NativeTabs.Trigger.Label>Producto</NativeTabs.Trigger.Label>
+        <NativeTabs.Trigger.Icon sf="tag" md="inventory" />
+      </NativeTabs.Trigger>
+    </NativeTabs>
   );
 }
